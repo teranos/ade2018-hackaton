@@ -7,21 +7,10 @@ html,body{
   margin:0;
   padding:0;
   height:100%;
-  font-family: 'Open Sans';
 }
 body{
   opacity:0;
   transition: all 1s linear;
-}
-
-.divider{
-  height: 150px;
-  width:2px;
-  background-color: #C0C9CE;
-  position: relative;
-  top: 50%;
-  float: left;
-  transform: translateY(-50%);
 }
 
 #background-stats-1{
@@ -30,6 +19,10 @@ body{
 
 #background-stats-2{
   background-color: #00cbca;
+}
+
+#background-stats-3{
+  background-color: #eefbee;
 }
 
 #content-container{
@@ -51,7 +44,7 @@ body{
   position: absolute;
   bottom: 40px;
   right: 20px;
-  color: #fff;
+  color: #000;
   opacity: 0.5;
   font-size: 45px;
   font-weight: 600;
@@ -64,8 +57,8 @@ body{
   vertical-align:middle;
   font-size:40px;
   font-weight: 600;
-  width: 450px;
-  height: 200px;
+  width: 100%;
+  height: 20%;
 }
 #choice a{
   text-decoration:none;
@@ -76,27 +69,33 @@ body{
 }
 
 #choice .choice{
-  width: 49%;
+  width: 33.33%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  text-align: left;
-  padding-left: 50px;
+  text-align: center;
+  padding-left: 20px;
 }
 
 #choice .choice .label{
   text-transform: uppercase;
 }
 
-#choice .choice.dogs{
-  color: #00cbca;
-  float: right;
-}
-
-#choice .choice.cats{
+#choice .choice.electroindustrial{
   color: #2196f3;
   float: left;
 }
+
+#choice .choice.neosynthpop{
+  color: #00cbca;
+  float: left;
+}
+
+#choice .choice.japaneserb{
+  color: #eefbee;
+  float: left;
+}
+
 #background-stats{
   z-index:1;
   height:100%;
@@ -104,7 +103,8 @@ body{
   position:absolute;
 }
 #background-stats div{
-  transition: width 400ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);;
   display:inline-block;
   margin-bottom:-4px;
   width:50%;

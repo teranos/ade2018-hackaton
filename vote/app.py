@@ -5,8 +5,9 @@ import socket
 import random
 import json
 
-option_a = os.getenv('OPTION_A', "Cats")
-option_b = os.getenv('OPTION_B', "Dogs")
+option_a = os.getenv('OPTION_A', "Area 1")
+option_b = os.getenv('OPTION_B', "Area 2")
+option_c = os.getenv('OPTION_C', "Area 3")
 hostname = socket.gethostname()
 
 app = Flask(__name__)
@@ -18,9 +19,9 @@ def get_redis():
 
 @app.route("/", methods=['POST','GET'])
 def hello():
-    voter_id = request.cookies.get('voter_id')
-    if not voter_id:
-        voter_id = hex(random.getrandbits(64))[2:-1]
+    #voter_id = request.cookies.get('voter_id')
+    #if not voter_id:
+    voter_id = hex(random.getrandbits(64))[2:-1]
 
     vote = None
 
@@ -34,6 +35,7 @@ def hello():
         'index.html',
         option_a=option_a,
         option_b=option_b,
+        option_c=option_c,
         hostname=hostname,
         vote=vote,
     ))

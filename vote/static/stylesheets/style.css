@@ -7,8 +7,9 @@ html,body{
   margin: 0;
   padding: 0;
   background-color: #F7F8F9;
+  background-image: url(../images/background--2018-v2.jpg);
   height: 100vh;
-  font-family: 'Open Sans';
+  font-family: 'Avenir';
 }
 
 button{
@@ -33,6 +34,19 @@ button.a{
 
 button.b{
   background-color: #00cbca;
+}
+
+button.c{
+  background-color: #eefbee;
+}
+
+#title {
+  color: #fff;
+  border: 4px solid #fff;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
 }
 
 #tip{
@@ -64,10 +78,6 @@ button.b{
   text-align: center;
 }
 
-#content-container-center h3{
-  color: #254356;
-}
-
 #choice{
   transition: all 300ms linear;
   line-height: 1.3em;
@@ -88,7 +98,7 @@ button.b{
   height: 80px;
   width: 330px;
   border: none;
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-size:18px;
   font-weight: 700;
@@ -99,11 +109,15 @@ button.b{
 }
 
 #choice button.a:hover{
-  background-color: #1488c6;
+  background: #1488c6;
 }
 
 #choice button.b:hover{
   background-color: #00a2a1;
+}
+
+#choice button.c:hover{
+  background-color: #aaa2a1;
 }
 
 #choice button.a:focus{
@@ -112,6 +126,10 @@ button.b{
 
 #choice button.b:focus{
   background-color: #00a2a1;
+}
+
+#choice button.c:focus{
+  background-color: #ffa2a1;
 }
 
 #background-stats{
