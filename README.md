@@ -1,7 +1,7 @@
 ADE 2018 DanceOmeter
 ========
 
-Based on Docker Compose [https://github.com/dockersamples/example-voting-app](Example voting app) by [https://github.com/dockersamples](Dockersamples).
+Based on Docker Compose [Example voting app](https://github.com/dockersamples/example-voting-app) by [Dockersamples](https://github.com/dockersamples).
 Tracks amount of movement (energy) dancers generate with app open on various stages.
 
 
