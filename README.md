@@ -1,7 +1,9 @@
-Example Voting App
-=========
+ADE 2018 DanceOmeter
+========
 
-A simple distributed application running across multiple Docker containers.
+Based on Docker Compose [https://github.com/dockersamples/example-voting-app](Example voting app) by [https://github.com/dockersamples](Dockersamples).
+Tracks amount of movement (energy) dancers generate with app open on various stages.
+
 
 Getting started
 ---------------
@@ -54,7 +56,7 @@ The app will be running at [http://localhost:5000](http://localhost:5000), and t
 Run the app in Kubernetes
 -------------------------
 
-The folder k8s-specifications contains the yaml specifications of the Voting App's services.
+The folder k8s-specifications contains the yaml specifications of the DanceOmeter's services.
 
 Run the following command to create the deployments and services objects:
 ```
@@ -77,14 +79,14 @@ Architecture
 
 ![Architecture diagram](architecture.png)
 
-* A front-end web app in [Python](/vote) or [ASP.NET Core](/vote/dotnet) which lets you vote between two options
-* A [Redis](https://hub.docker.com/_/redis/) or [NATS](https://hub.docker.com/_/nats/) queue which collects new votes
-* A [.NET Core](/worker/src/Worker), [Java](/worker/src/main) or [.NET Core 2.1](/worker/dotnet) worker which consumes votes and stores them in…
+* A front-end web app in [Python](/vote) or [ASP.NET Core](/vote/dotnet) which lets you dance on three stages
+* A [Redis](https://hub.docker.com/_/redis/) or [NATS](https://hub.docker.com/_/nats/) queue which collects new dances
+* A [.NET Core](/worker/src/Worker), [Java](/worker/src/main) or [.NET Core 2.1](/worker/dotnet) worker which consumes dances and stores them in…
 * A [Postgres](https://hub.docker.com/_/postgres/) or [TiDB](https://hub.docker.com/r/dockersamples/tidb/tags/) database backed by a Docker volume
-* A [Node.js](/result) or [ASP.NET Core SignalR](/result/dotnet) webapp which shows the results of the voting in real time
+* A [Node.js](/result) or [ASP.NET Core SignalR](/result/dotnet) webapp which shows the energy created by dancing in real time
 
 
 Note
 ----
 
-The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
+DanceOmeter only accepts one dance per dancer. It does not register dancing if a dance has already been danced by a dancer.
